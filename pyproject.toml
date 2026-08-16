@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "surfaceproof"
+version = "0.1.0"
+description = "Evidence-first auditing of explicitly scoped public web artifacts"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [{name = "Luke Schneider"}]
+dependencies = []
+keywords = ["security", "web", "evidence", "redaction", "sarif"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Security",
+]
+
+[project.urls]
+Homepage = "https://github.com/pzzzy/surfaceproof"
+Repository = "https://github.com/pzzzy/surfaceproof"
+Issues = "https://github.com/pzzzy/surfaceproof/issues"
+
+[project.scripts]
+surfaceproof = "surfaceproof.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["surfaceproof*"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

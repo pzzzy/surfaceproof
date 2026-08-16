@@ -1,0 +1,7 @@
+{
+  "allowed_hosts": ["www.example.com", "static.example.com"],
+  "max_requests": 30,
+  "max_total_bytes": 8000000,
+  "max_asset_bytes": 1500000,
+  "delay_seconds": 0.5
+}
